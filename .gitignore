@@ -1,6 +1,7 @@
 .gradle
 /build/
 gradle
+test
 # Ignore Gradle GUI config
 gradle-app.setting
 
