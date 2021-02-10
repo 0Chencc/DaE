@@ -3,7 +3,7 @@
 
 Many people suggested that I develop BurpSuite version, so I ported this tool to Burp
 
- [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://raw.githubusercontent.com/0Chencc/DaE/master/doc/LICENSE)
+ [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://github.com/0Chencc/DaE/blob/main/LICENSE)
  [![language](https://img.shields.io/badge/Language-Java/Kotlin-orange.svg)](https://github.com/0Chencc/DaE/)
 # Support
 
