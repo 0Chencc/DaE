@@ -14,7 +14,7 @@ public class BurpExtender implements IBurpExtender, ITab {
     public void registerExtenderCallbacks(final IBurpExtenderCallbacks callbacks)
     {
         this.callbacks = callbacks;
-        String version = "1.1.0";
+        String version = "1.1.1";
         callbacks.setExtensionName(String.format("DaE (%s) - CTFCrackTools's Burpsuite Plugin - Decode and Encode", version));
         // 定义输出
         stdout = new PrintWriter(callbacks.getStdout(), true);
