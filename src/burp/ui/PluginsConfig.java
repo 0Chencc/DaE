@@ -5,14 +5,17 @@ package burp.ui;/*
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 import javax.swing.*;
+import javax.swing.event.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 
 import burp.fuction.PythonFunc;
 import burp.json.PluginsJson;
+import burp.json.SettingJson;
 
 /**
  * @author 0chencc
@@ -86,7 +89,7 @@ public class PluginsConfig extends JPanel {
         //======== this ========
         setLayout(new GridBagLayout());
         ((GridBagLayout)getLayout()).columnWidths = new int[] {55, 0, 0};
-        ((GridBagLayout)getLayout()).rowHeights = new int[] {0, 36, 0, 49, 0, 32, 0};
+        ((GridBagLayout)getLayout()).rowHeights = new int[] {0, 0, 0, 49, 0, 32, 0};
         ((GridBagLayout)getLayout()).columnWeights = new double[] {0.0, 1.0, 1.0E-4};
         ((GridBagLayout)getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0E-4};
 

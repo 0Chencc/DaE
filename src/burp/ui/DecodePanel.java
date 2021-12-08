@@ -39,17 +39,20 @@ public class DecodePanel extends JPanel {
         String select = pluginsComboBox.getItemAt(pluginsComboBox.getSelectedIndex());
         PythonFunc pyFunc = new PythonFunc();
         Map<String,Object> plugin = json.search(select);
-        ArrayList<String> keys = (ArrayList<String>) plugin.get("key");
-        String[] parms = new String[keys.size()+1];
+        String[] prams = {};
+        ArrayList<String> keys = new ArrayList<>();
+        if (plugin.containsKey("key")){
+            keys = (ArrayList<String>) plugin.get("key");
+            prams = new String[keys.size()+1];
+        }
+        pyFunc.loadFile(plugin.get("path").toString());
         if (keys.size()>=1){
-            parms[0] = inputArea.getText();
-            for (int i = 1;i<parms.length;i++){
-                parms[i] = JOptionPane.showInputDialog("Please input "+keys.get(i-1));
+            prams[0] = inputArea.getText();
+            for (int i = 1;i<prams.length;i++){
+                prams[i] = JOptionPane.showInputDialog("Please input "+keys.get(i-1));
             }
-            pyFunc.loadFile(plugin.get("path").toString());
-            resultArea.setText(pyFunc.execFuncOfArr(pyFunc.loadPythonFunc(pyFunc.interpreter,"main"),parms).toString());
+            resultArea.setText(pyFunc.execFuncOfArr(pyFunc.loadPythonFunc(pyFunc.interpreter,"main"),prams).toString());
         }else {
-            pyFunc.loadFile(plugin.get("path").toString());
             resultArea.setText(pyFunc.execFuncOfArr(pyFunc.loadPythonFunc(pyFunc.interpreter,"main"),inputArea.getText()).toString());
         }
         pluginsComboBox.setSelectedIndex(0);

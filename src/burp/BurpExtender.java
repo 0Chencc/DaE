@@ -2,7 +2,6 @@ package burp;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ItemEvent;
 import java.io.PrintWriter;
 
 import burp.ui.MainUi;

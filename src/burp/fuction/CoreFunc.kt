@@ -3,6 +3,7 @@ package burp.fuction
 import org.apache.commons.codec.binary.Base32
 import org.apache.commons.codec.binary.Base64.*
 import org.apache.commons.lang3.StringEscapeUtils;
+import org.apache.commons.lang3.StringUtils
 import java.net.URLDecoder
 import java.net.URLEncoder
 import java.util.*
@@ -438,7 +439,7 @@ class CoreFunc{
     val isChar = {c:Char -> c.isLowerCase()||c.isUpperCase()}
     val isDigit = {c:Char -> (c >='0')&&(c <= '9')}
     /* moresCode */
-    val morseCharacters = arrayOf(".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "..", ".---",
+    val morseCharacters = arrayOf(".-", "-...", "-.-.", "-..", ".", "..-.", "--.", "....", "src", ".---",
             "-.-", ".-..", "--", "-.", "---", ".--.", "--.-", ".-.", "...", "-", "..-", "...-", ".--", "-..-", "-.--",
             "--..")
     val morseDigits = arrayOf("-----", ".----", "..---", "...--", "....-", ".....", "-....", "--...",
