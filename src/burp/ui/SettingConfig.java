@@ -4,13 +4,15 @@
 
 package burp.ui;
 
+import burp.json.SettingJson;
+import burp.json.SettingJson;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Map;
 import javax.swing.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
-import burp.json.SettingJson;
 
 /**
  * @author 0chencc

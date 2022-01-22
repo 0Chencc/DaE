@@ -6,6 +6,9 @@ import java.io.PrintWriter;
 
 import burp.ui.MainUi;
 
+/**
+ * @author linchen
+ */
 public class BurpExtender implements IBurpExtender, ITab {
     private IBurpExtenderCallbacks callbacks;
     private static PrintWriter stdout;
@@ -14,8 +17,7 @@ public class BurpExtender implements IBurpExtender, ITab {
     public void registerExtenderCallbacks(final IBurpExtenderCallbacks callbacks)
     {
         this.callbacks = callbacks;
-        String version = "1.1.1";
-        callbacks.setExtensionName(String.format("DaE (%s) - CTFCrackTools's Burpsuite Plugin - Decode and Encode", version));
+        callbacks.setExtensionName(String.format("DaE (%s) - CTFCrackTools's Burpsuite Plugin - Decode and Encode", Config.VERSION));
         // 定义输出
         stdout = new PrintWriter(callbacks.getStdout(), true);
         stdout.println("@Author: 0chencc");

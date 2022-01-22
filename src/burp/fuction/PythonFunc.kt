@@ -87,4 +87,4 @@ class PythonFunc {
     fun getAuthorInfo(file:String):Map<String,Any>  {
         loadFile(file)
         return execFunc(loadPythonFunc(interpreter,"author_info")) as Map<String, Any>}
-    }
+}

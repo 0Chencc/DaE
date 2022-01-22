@@ -4,6 +4,8 @@
 
 package burp.ui;
 
+import burp.Config;
+
 import java.awt.*;
 import javax.swing.*;
 
@@ -29,23 +31,20 @@ public class About extends JPanel {
 
         //======== scrollPane1 ========
         {
+
+            //---- textArea1 ----
+            textArea1.setLineWrap(true);
             scrollPane1.setViewportView(textArea1);
         }
         add(scrollPane1, new GridBagConstraints(0, 0, 1, 1, 0.0, 0.0,
             GridBagConstraints.CENTER, GridBagConstraints.BOTH,
             new Insets(0, 0, 0, 0), 0, 0));
         // JFormDesigner - End of component initialization  //GEN-END:initComponents
-        textArea1.setText(about);
+        textArea1.setText(Config.ABOUT);
     }
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
     private JScrollPane scrollPane1;
     private JTextArea textArea1;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
-    private String about = "Author:0chen(@0chencc)\n" +
-            "Twitter:@0chencc\n" +
-            "GitHub:https://github.com/0Chencc\n" +
-            "Wechat Official Accounts(公众号):XizhouPoetry\n" +
-            "Repository Url：https://github.com/0Chencc/CTFCrackTools\n" +
-            "米斯特安全团队招CTF选手，有意向联系admin@hi-ourlife.com";
 }

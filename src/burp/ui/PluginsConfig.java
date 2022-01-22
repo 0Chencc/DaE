@@ -5,17 +5,14 @@ package burp.ui;/*
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Vector;
 import javax.swing.*;
-import javax.swing.event.*;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
 
-import burp.fuction.PythonFunc;
-import burp.json.PluginsJson;
-import burp.json.SettingJson;
+import burp.Config;
+import org.ctfcracktools.json.PluginsJson;
 
 /**
  * @author 0chencc
@@ -46,8 +43,7 @@ public class PluginsConfig extends JPanel {
         int selectFrame = selectFile.showDialog(new JLabel(),"Select");
         if (selectFrame == JFileChooser.APPROVE_OPTION){
             String pluginPath = selectFile.getSelectedFile().toString();
-            PythonFunc pyFunc = new PythonFunc();
-            Map<String,Object> plugin = pyFunc.getAuthorInfo(pluginPath);
+            Map<String,Object> plugin = Config.pyFunc.getAuthorInfo(pluginPath);
             plugin.put("path",pluginPath);
             plugins.add(plugin);
             json.writeJson(plugins);
