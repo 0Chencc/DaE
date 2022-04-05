@@ -9,7 +9,7 @@ import java.io.File;
  * @author linchen
  */
 public class Config {
-    public final static String VERSION = "1.1.2";
+    public final static String VERSION = "1.1.3";
     public final static String SLOGAN = "";
     public final static String ABOUT =
             "Author:0chen(@0chencc)\n" +
